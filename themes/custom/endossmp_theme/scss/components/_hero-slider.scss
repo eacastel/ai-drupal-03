@@ -1,0 +1,146 @@
+/*-- Hero Slider --*/
+
+.slick__slider {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+  
+  .media--blazy {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+  
+  .slide {
+    position: relative;
+  
+    &__caption {
+      bottom: 0;
+      min-height: 80px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      position: relative;
+      color: white;
+    }
+    
+    &__link {
+      display: inline-block;
+      margin-top: 20px;
+  
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          background-color: #0056b3;
+          transform: translateY(-3px);
+        }
+        
+        &:active {
+          background-color: #003080;
+          transform: translateY(1px);
+        }
+      }
+    }
+    
+    &__content {
+      position: relative;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  
+    &__description {
+      font-size: 70%;
+    }
+    
+    &__media {
+      position: relative;
+  
+      .media--blazy {
+        position: relative;
+        z-index: 0;
+      }
+    }
+  }
+  
+  .slick--skin--fullwidth {
+    .slide__title {
+      font-size: 220%;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    
+    .slide__caption {
+      font-size: initial;
+    }
+  }
+  
+  section#block-views-block-endos-sliders-block-1 {
+    margin-bottom: 2em;
+  }
+  
+  @media (min-width: 768px) {
+    .slick__slide {
+      .slide__constrained {
+        height: 100%;
+        left: 50%;
+        margin-left: -49%;
+        position: absolute;
+        width: 98%;
+      }
+      
+      .slick--skin--fullwidth {
+        .slide__caption {
+          top: 0px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .slick--skin--fullwidth {
+      .slide__caption {
+        font-size: 65%;
+        top: -40px;
+      }
+    }
+    
+    .slick__slide {
+      .slide__constrained {
+        box-sizing: border-box;
+        height: 100%;
+        min-height: 210px;
+        padding-top: 10%;
+        pointer-events: none;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+  

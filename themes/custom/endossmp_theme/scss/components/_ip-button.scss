@@ -1,0 +1,37 @@
+/*-- IP Button Text --*/
+
+.block-title {
+    margin: 0.5em 0;
+    font-size: 2rem;
+  }
+  
+  .ip-block {
+    text-align: center;
+    margin: 10px auto;
+  }
+  
+  .ip-box-container {
+    padding: 10px;
+    border: 3px solid #545454;
+    background-color: #181818;
+    border-radius: 15px;
+  
+    h2 {
+      text-align: center;
+    }
+  }
+  
+  .ip-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #080808;
+  
+    h3 {
+      margin: -0.5em 0 0.5em 0;
+    }
+  
+    p {
+      margin-block-start: -1em;
+    }
+  }
